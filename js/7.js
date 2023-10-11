@@ -14,7 +14,7 @@ pnum.onblur = function () {
 }
 var timer
 fs.onclick = function () {
-    var num = 5;
+    var num = 60;
     clearInterval(timer);
     timer = setInterval(function () {
         fs.innerHTML = num;
