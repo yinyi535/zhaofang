@@ -35,6 +35,10 @@ footer .banner .one {
   padding: 1rem;
   border-bottom: 1px solid #8f9190;
 }
+footer .banner .one a {
+  color: #8f9190;
+  text-decoration: none;
+}
 footer .banner .two {
   width: 20rem;
   padding: 1rem 0;
