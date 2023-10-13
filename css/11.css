@@ -94,6 +94,9 @@ div {
   display: flex;
   justify-content: space-between;
 }
-div p:nth-of-type(1) {
+div p:nth-of-type(1) a {
   color: #ff8a00;
+}
+div a {
+  text-decoration: none;
 }
