@@ -18,7 +18,7 @@ iframe:nth-last-of-type(1) {
   width: 100%;
   position: relative;
   font-size: 0px;
-  margin-top: -4px;
+  margin-top: -0.3rem;
 }
 .banner > img {
   width: 100%;

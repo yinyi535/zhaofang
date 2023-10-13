@@ -38,14 +38,16 @@ body {
 }
 nav {
   width: 100%;
+  position: relative;
 }
-nav ul {
+nav > ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
   background-color: white;
+  border-bottom: 1px solid #999999;
 }
-nav ul li {
+nav > ul li {
   width: 25%;
   display: flex;
   justify-content: center;
@@ -55,12 +57,117 @@ nav ul li {
   color: #666;
   line-height: 3em;
 }
-nav ul li span {
+nav > ul li .span_active {
+  border: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #C3955C;
+}
+nav > ul li span {
   margin-left: 0.6rem;
   width: 0rem;
   height: 0rem;
   border: 0.5rem solid transparent;
   border-top: 0.5rem solid gray;
+}
+nav .list_yc {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-content: stretch;
+  display: none;
+  background-color: white;
+}
+nav .list_yc .left {
+  font-size: 1.2rem;
+  background-color: #F0F0F0;
+  width: 20%;
+}
+nav .list_yc .left p {
+  text-align: center;
+  line-height: 4rem;
+}
+nav .list_yc .right {
+  width: 80%;
+}
+nav .list_yc .right ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: white;
+  justify-content: space-around;
+}
+nav .list_yc .right ul li {
+  width: 34%;
+  box-shadow: 1px 1px 2px gray;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+nav .list_yc .right ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #666;
+}
+nav .list_yc .right ul li a:hover {
+  color: #C3955C;
+}
+nav .list_yc > ul {
+  width: 100%;
+  list-style: none;
+  background-color: pink;
+}
+nav .list_yc > ul li {
+  width: 100%;
+  padding-left: 2.5rem;
+  line-height: 3rem;
+  background-color: white;
+  border-bottom: 0.1rem solid #666666;
+  box-sizing: border-box;
+}
+nav .list_yc > ul li:nth-last-of-type(1) {
+  padding: 0;
+}
+nav .list_yc > ul li button {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-top: 0.1rem solid #FF8A00;
+  background-color: #FF8A00;
+  line-height: 3rem;
+}
+nav .list_yc:nth-last-of-type(1) {
+  flex-direction: column;
+}
+nav .list_yc > .yc_content {
+  width: 100%;
+  margin-top: 2rem;
+  border-bottom: 1px solid gray;
+}
+nav .list_yc > .yc_content p {
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  padding-left: 2.5rem;
+}
+nav .list_yc > .yc_content .content1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2.2rem;
+  margin: 0 auto;
+}
+nav .list_yc > .yc_content .content1 span {
+  text-align: center;
+  width: 14%;
+  margin-left: 1rem;
+  padding: 0.3rem 1rem;
+  border: 0.1rem solid gray;
+  margin-top: 1.5rem;
+}
+a {
+  text-decoration: none;
+}
+.li_active {
+  color: #C3955C;
+  background-color: white;
 }
 .bottom {
   display: flex;
