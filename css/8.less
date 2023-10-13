@@ -2,3 +2,70 @@
     margin: 0;
     padding: 0;
 }
+
+p {
+    width: 100%;
+    height: 4rem;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    line-height: 4rem;
+
+    span {
+        color: rgb(15, 15, 15);
+        font-weight: 800;
+    }
+}
+
+div {
+    background: url(../image/my/bg2.png)no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 15rem;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        transform: translate(0, 2rem);
+    }
+
+    p {
+        padding: 0;
+        color: white;
+        transform: translate(0, 4rem);
+    }
+}
+
+.box {
+    list-style: none;
+
+    li {
+        height: 5rem;
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0 2rem;
+        font-size: 1.6rem;
+        line-height: 5rem;
+        border-bottom: 1px solid rgb(143, 145, 144);
+
+        span {
+            float: right;
+        }
+
+        &:nth-last-of-type(1) {
+            border: none;
+            height: auto;
+            padding: 2rem;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: rgb(255, 138, 0);
+                width: 90%;
+                border: 1px solid rgb(255, 138, 0);
+                height: 5rem;
+                text-align: center;
+            }
+        }
+    }
+}

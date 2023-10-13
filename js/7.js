@@ -4,6 +4,7 @@ var yzm = document.querySelector('.box').children[2].children[0]
 var pass = document.querySelector('.box').children[3].children[0]
 var btn = document.querySelector('button')
 var form = document.querySelector('form')
+//手机号
 pnum.onblur = function () {
     reg = /^1[34578][0-9]{9}$/;
     if (reg.test(pnum.value) == false) {
@@ -14,7 +15,7 @@ pnum.onblur = function () {
 }
 var timer
 fs.onclick = function () {
-    var num = 5;
+    var num = 60;
     clearInterval(timer);
     timer = setInterval(function () {
         fs.innerHTML = num;
@@ -25,13 +26,16 @@ fs.onclick = function () {
         }
     }, 1000);
 }
+//验证码
 yzm.onblur = function () {
-    if (reg.value == '021028') {
+    if (yzm.value == '021028') {
         return true
     } else {
         return false
     }
 }
+
+//密码
 pass.onblur = function () {
     reg = /^[A-Za-z0-9]+$/
     if (reg.test(pass.value) == true) {
@@ -40,6 +44,7 @@ pass.onblur = function () {
         return false;
     }
 }
+//点击
 btn.onclick = function (e) {
     if (pnum.onblur() && yzm.onblur() && pass.onblur()) {
         addCookie('pnum', pnum.value)
@@ -50,8 +55,8 @@ btn.onclick = function (e) {
         if (pnum.onblur() == false) {
             alert(" alert('手机号格式不正确')")
         } else if (yzm.onblur() == false) {
-            alert('验证码不正确')
-        } else if (pass.onblur() == false) {
+            alert('验证码是021028哇')
+        } else {
             alert('密码格式不正确')
         }
     }
