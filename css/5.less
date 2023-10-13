@@ -160,6 +160,8 @@ nav {
                 border-bottom: .1rem solid #666666;
                 box-sizing: border-box;
 
+
+
                 button {
                     width: 100%;
                     outline: none;
@@ -260,31 +262,30 @@ a {
                 display: flex;
                 justify-content: flex-start;
                 font-size: 1.2rem;
+                color: #000000;
             }
 
-            p:nth-of-type(3)>span:nth-of-type(2) {
-                color: #FF8A00;
-            }
-
-            p:nth-of-type(3),
             p:nth-of-type(4) {
-                color: #8B8B8B;
+                display: flex;
+                justify-content: space-between;
             }
 
-            .house_yd {
-                display: flex;
+            p:nth-of-type(4)>span:nth-of-type(1) {
+                padding: .3rem 1rem;
+                border: .1rem solid #8DB94D;
+                color: #8DB94D;
+            }
 
-                span {
-                    padding: .4rem 1rem;
-                    background-color: #cee6f7;
-                    color: #85939c;
-                    margin-right: .8rem;
-                }
+            p:nth-of-type(4)>span:nth-of-type(2) {
+                color: #FF8A00;
+                font-weight: 700;
             }
 
 
         }
+    }
 
-
+    >a:nth-last-of-type(1) .house {
+        border: none;
     }
 }
