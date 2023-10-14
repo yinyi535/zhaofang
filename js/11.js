@@ -34,13 +34,18 @@ fs.onclick = function () {
     }, 1000);
 }
 btn.onclick = function (e) {
-    var cok = document.cookie.split(';')
-    var pnumcok = cok[0].split('=')
-    var passcok = cok[1].split('=')
-    if ((kz[0].children[0].value == pnumcok[1] && zk[0].children[0].value == passcok[1]) || (kz[1].children[0].value == pnumcok[1] && zk[1].children[0].value == '021028')) {
-        form.submit();
+    if (document.cookie != '') {
+        var cok = document.cookie.split(';')
+        var pnumcok = cok[0].split('=')
+        var passcok = cok[1].split('=')
+        if ((kz[0].children[0].value == pnumcok[1] && zk[0].children[0].value == passcok[1]) || (kz[1].children[0].value == pnumcok[1] && zk[1].children[0].value == '021028')) {
+            form.submit();
+        } else {
+            e.returnValue = false;
+            alert('手机号或密码不正确')
+        }
     } else {
         e.returnValue = false;
-        alert('手机号或密码不正确')
+        alert('请先注册哦')
     }
 }

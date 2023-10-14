@@ -27,6 +27,9 @@ fs.onclick = function () {
     }, 1000);
 }
 //验证码
+yzm.onclick = function () {
+    alert('验证码是021028哇')
+}
 yzm.onblur = function () {
     if (yzm.value == '021028') {
         return true
